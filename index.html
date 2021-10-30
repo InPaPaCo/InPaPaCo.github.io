@@ -39,7 +39,17 @@
     <div class="container">
         
         <div class="content1">
-            내용?
+            <div id="map" style="width:500px;height:400px;"></div>
+                <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0806124c4b7baa046d9763c7760ba413"></script>
+                <script>
+                    var container = document.getElementById('map');
+                    var options = {
+                        center: new kakao.maps.LatLng(33.450701, 126.570667),
+                        level: 3
+                    };
+
+                    var map = new kakao.maps.Map(container, options);
+                </script>
         </div>
         <div class="content2"></div>
     </div>
