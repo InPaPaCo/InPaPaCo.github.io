@@ -44,6 +44,8 @@
     <div id="map" style="width:1fr;height:350px;"></div>
                 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0806124c4b7baa046d9763c7760ba413"></script>
                 <script>
+                    var infowindow = new kakao.maps.InfoWindow({zIndex:1});
+                    
                     var container = document.getElementById('map');
                     var options = {
                         center: new kakao.maps.LatLng(37.450701, 127.570667),
@@ -51,6 +53,7 @@
                     };
 
                     var map = new kakao.maps.Map(container, options);
+                    
                     // HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
                     if (navigator.geolocation) {
 
