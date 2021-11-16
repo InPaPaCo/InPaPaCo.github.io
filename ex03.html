@@ -411,7 +411,7 @@
                 var currentPosition = parseInt($("#ex.used_chat").css("top")); 
                 $(window).scroll(function() { 
                     var position = $(window).scrollTop();
-                    $("#ex.used_chat").stop().animate({"top":position+currentPosition+"px"},1000); 
+                    $("#ex.used_chat").stop().animate({"top":-100 + position+currentPosition+"px"},1000); 
                 });
             }
         
