@@ -76,6 +76,12 @@
                 else{
                     document.getElementById("ex").style.display = 'none';
                 }
+                var currentPosition = parseInt($("#ex.used_chat").css("top")); 
+                $(window).scroll(function() { 
+                    var position = $(window).scrollTop();
+                    $("#ex.used_chat").stop().animate({"top":-100 + position+currentPosition+"px"},1000); 
+                });
+        
                 
          }
          var chat_logtop = 5;
@@ -129,7 +135,7 @@
                 이 책을 중고로 올린사람!
                 <br><br>
                 OOO : 10000원
-                <button type="button" onclick = "chat_hide() ex01()">대화</button>
+                <button type="button" onclick = "chat_hide()">대화</button>
                 <br>
                 OOO : 14000원
                 <button type="button" onclick = "" >대화</button>
@@ -407,14 +413,7 @@
         </div>
     </div>
         <script>
-            function ex01(){
-                var currentPosition = parseInt($("#ex.used_chat").css("top")); 
-                $(window).scroll(function() { 
-                    var position = $(window).scrollTop();
-                    $("#ex.used_chat").stop().animate({"top":-100 + position+currentPosition+"px"},1000); 
-                });
-            }
-        
+            
         </script>
     <div class="footer">
         <input type="text" id = "chat_textbox01" onkeypress="if( event.keyCode == 13 ){chatting_receive();}" style = "width: 400px; height: 30px; border-radius: 10px; border: 2px solid gray">
