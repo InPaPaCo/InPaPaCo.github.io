@@ -68,6 +68,27 @@
                     document.querySelector('.btn_open').classList.add('hide'); // 버튼 감춤
                 }
             });
+        
+         var chat_logtop = 5;
+         var chat_logid = 0;
+         var m = 0;
+         function chatting_send(){
+            const element = document.getElementById("chat_log01");
+                    element.innerHTML += '<div' + 'id = "chatlog' + chat_logid +'" style="position: absolute; right: 5px; top:'+ chat_logtop +'px; border: 2px solid black; width: max-content; float: right; padding:5px; border-radius: 50px;">'+
+                    document.getElementById("chat_textbox").value +'</div>';
+                
+                chat_logtop += 50;
+                chat_logid++;
+                document.getElementById("chat_textbox").value = '';
+         }
+         function chatting_receive(){
+            const element = document.getElementById("chat_log01");
+            element.innerHTML += '<div style="position: absolute; left: 5px; top:'+ chat_logtop +'px; border: 2px solid black; width: max-content; float: right; padding:5px; border-radius: 50px;">'+
+                document.getElementById("chat_textbox01").value +'</div>'
+                chat_logtop += 50;
+                document.getElementById("chat_textbox01").value = '';
+         }
+ 
     </script>
     <div class = "search">
         <div class = "searchin">
@@ -367,6 +388,20 @@
     <div class="footer">
         
     </div>
+    <div class = "used_chat" id = "ex" style="display: none; position: relative; bottom: 450px; right: 20px; width: 500px; height: 500px; float: right; z-index: 2">
+        <div id = "chat_log01" style="overflow: auto; position: relative; top: 10px; left: 10px; width: 465px; height: 430px; border: 2px solid black; border-radius: 10px; text-align: right; z-index: 2; ">
+                    
+        </div>
+        <div style="position: relative; bottom: 424px; left: 10px; width: 465px; height: 430px; border: 2px solid black; border-radius: 10px; z-index: 1;">
+
+        </div>
+        <div>
+            <input type="text" id = "chat_textbox" onkeypress="if( event.keyCode == 13 ){chatting_send();}" style = "position: relative; bottom: 415px; left: 10px; width: 400px; height: 30px; border-radius: 10px; border: 2px solid gray">=
+            <input type="button" value="전송" style = "position: relative; bottom: 415px; left: 10px; width: 60px; height: 36px;
+                background-color: lightblue; border: 2px solid gray; border-radius: 10px; color: white; font-size: 15px;">
+        </div>
+    </div>
+
     <div style ="float:right;">
         <iframe src="mainchat.html" name="chat"
              width="100%" height="100%" frameborder="0" scrolling="yes" marginwidth="0" marginheight="0" style="width:335px; height:330px;">
