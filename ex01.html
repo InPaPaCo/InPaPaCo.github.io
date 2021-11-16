@@ -68,6 +68,16 @@
                     document.querySelector('.btn_open').classList.add('hide'); // 버튼 감춤
                 }
             });
+         function chat_hide(){
+                
+                if(document.getElementById("ex").style.display == 'none'){
+                    document.getElementById("ex").style.display = 'block';
+                }
+                else{
+                    document.getElementById("ex").style.display = 'none';
+                }
+                
+         }
         
          var chat_logtop = 5;
          var chat_logid = 0;
@@ -119,7 +129,7 @@
                 이 책을 중고로 올린사람!
                 <br><br>
                 OOO : 10000원
-                <button type="button" onclick = "location.href = 'ex02.html'">대화</button>
+                <button type="button" onclick = "chat_hide()">대화</button>
                 <br>
                 OOO : 14000원
                 <button type="button" onclick = "location.href = 'ex02.html'">대화</button>
