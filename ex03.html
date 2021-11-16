@@ -406,6 +406,11 @@
                 background-color: lightblue; border: 2px solid gray; border-radius: 10px; color: white; font-size: 15px;">
         </div>
     </div>
+        <script>
+        var currentPosition = parseInt($(".used_chat").css("top")); 
+            $(window).scroll(function() { var position = $(window).scrollTop();
+            $(".used_chat").stop().animate({"top":position+currentPosition+"px"},1000); });
+        </script>
     <div class="footer">
         <input type="text" id = "chat_textbox01" onkeypress="if( event.keyCode == 13 ){chatting_receive();}" style = "width: 400px; height: 30px; border-radius: 10px; border: 2px solid gray">
     </div>
