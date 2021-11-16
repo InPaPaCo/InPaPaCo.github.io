@@ -408,10 +408,10 @@
     </div>
     <script>
     $(document).ready(function(){
-        var currentPosition = parseInt($("#used_chat").css("top"));
+        var currentPosition = parseInt($(".used_chat").css("top"));
         $(window).scroll(function() {
             var position = $(window).scrollTop(); // 현재 스크롤바의 위치값을 반환합니다.
-            $("#used_chat").stop().animate({"top":position+currentPosition+"px"},1000);
+            $(".used_chat").stop().animate({"top":position+currentPosition+"px"},1000);
         });
     });
         </script>
