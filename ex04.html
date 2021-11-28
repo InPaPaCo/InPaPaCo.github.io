@@ -20,7 +20,16 @@
 
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0806124c4b7baa046d9763c7760ba413&libraries=services"></script>
     <script>
-        
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
+            mapOption = { 
+                center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                level: 10 // 지도의 확대 레벨
+            };
+
+        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+        var lat_temp;
+        var lon_temp;
         if (navigator.geolocation) {
 
                 // GeoLocation을 이용해서 접속 위치를 얻어옵니다
