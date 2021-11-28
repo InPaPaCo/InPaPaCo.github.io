@@ -37,10 +37,6 @@
         var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다 
         
         
-        var my_lat;
-        var my_lon;
-        
-        
         if (navigator.geolocation) {
     
         // GeoLocation을 이용해서 접속 위치를 얻어옵니다
@@ -52,8 +48,6 @@
             var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
                 message = '<div style="padding:5px;">여기에 계신가요?!</div>'; // 인포윈도우에 표시될 내용입니다
 
-            my_lat = position.coords.latitude;
-            my_lon = position.coords.longitude;
             // 마커와 인포윈도우를 표시합니다
             // displayMarker(locPosition, message);
 
@@ -106,10 +100,6 @@
             {
                 title: '야외음악당', 
                 latlng: new kakao.maps.LatLng(35.8510261, 128.5564089)
-            },
-            {
-                title: '내위치!!', 
-                latlng: new kakao.maps.LatLng(my_lat, my_lon)
             }
         ];
         for (var i = 0; i < positions.length; i ++) {
@@ -193,12 +183,8 @@
                 infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.place_name + '</div>');
                 infowindow.open(map, marker);
             });
-        }
-        */
+        }*/
 
-        
-        
-        
         
         
     </script>
