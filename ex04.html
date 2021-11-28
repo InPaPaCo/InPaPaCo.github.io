@@ -21,6 +21,24 @@
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0806124c4b7baa046d9763c7760ba413&libraries=services"></script>
     <script>
         
+        
+        // 마커를 표시할 위치와 title 객체 배열입니다 
+        var positions = [
+            {
+                title: '두류공원', 
+                latlng: new kakao.maps.LatLng(35.8467829, 128.5564575)
+            },
+            {
+                title: 'E월드', 
+                latlng: new kakao.maps.LatLng(35.8532997, 128.5643566)
+            },
+            {
+                title: '야외음악당', 
+                latlng: new kakao.maps.LatLng(35.8510261, 128.5564089)
+            }
+        ];
+        
+        
         //마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
         var infowindow = new kakao.maps.InfoWindow({zIndex:1});
 
@@ -121,7 +139,7 @@
         function displayMarker(place) {
 
             // 마커를 생성하고 지도에 표시합니다
-            var marker = new kakao.maps.Marker({
+            var marker = new kakao.maps.CustomOverlay({
                 map: map,
                 position: new kakao.maps.LatLng(place.y, place.x) 
             });
