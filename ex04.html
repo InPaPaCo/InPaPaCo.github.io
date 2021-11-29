@@ -17,12 +17,13 @@
         </ul>
     </div>
     <div id="map" style="width:100%;height:350px;"></div>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0806124c4b7baa046d9763c7760ba413"></script>
 <script>
     
 	var lat_temp;
 	var lon_temp;
     
-    if (navigator.geolocation) {
+    	if (navigator.geolocation) {
 
                 // GeoLocation을 이용해서 접속 위치를 얻어옵니다
                 navigator.geolocation.getCurrentPosition(function(position) {
@@ -52,6 +53,10 @@
                     // 마커와 인포윈도우를 표시합니다
                     // displayMarker(locPosition, message);
                   });
+		  
+		  
+	
+	
         // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
         var positions = [
             {
