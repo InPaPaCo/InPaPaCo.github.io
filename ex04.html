@@ -40,10 +40,11 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
                     var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
                         message = '<div style="padding:5px;">여기에 계신가요?!</div>'; // 인포윈도우에 표시될 내용입니다
 			
-			 kakao.maps.Marker({
-                            map: map, // 마커를 표시할 지도
-                            position: locPosition // 마커의 위치
-                        });
+			var marker = new kakao.maps.Marker({
+				position : locPosition
+			});
+			
+			marker.setMap(map);
                   })
                 }
 
