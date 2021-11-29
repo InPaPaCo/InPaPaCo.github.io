@@ -17,22 +17,28 @@
         </ul>
     </div>
     <div id="map" style="width:100%;height:350px;"></div>
-
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0806124c4b7baa046d9763c7760ba413&libraries=services"></script>
-    <script>
+<script>
     
+	var lat_temp;
+	var lon_temp;
+    
+    if (navigator.geolocation) {
 
-
+                // GeoLocation을 이용해서 접속 위치를 얻어옵니다
+                navigator.geolocation.getCurrentPosition(function(position) {
+                     lat_temp = position.coords.latitude, // 위도
+                     lon_temp = position.coords.longitude; // 경도
+                })}
+    
         var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
             mapOption = { 
-                center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-                level: 10 // 지도의 확대 레벨
+                center: new kakao.maps.LatLng(lat_temp, lon_temp), // 지도의 중심좌표
+                level: 5 // 지도의 확대 레벨
             };
 
         var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
-        var lat_temp;
-        var lon_temp;
+        
         if (navigator.geolocation) {
 
                 // GeoLocation을 이용해서 접속 위치를 얻어옵니다
@@ -53,16 +59,16 @@
                 latlng: new kakao.maps.LatLng(33.450705, 126.570677)
             },
             {
-                content: '<div>생태연못</div>', 
-                latlng: new kakao.maps.LatLng(33.450936, 126.569477)
+                content: '<div>두류공원</div>', 
+                latlng: new kakao.maps.LatLng(35.8467829, 128.5564575)
             },
             {
-                content: '<div>텃밭</div>', 
-                latlng: new kakao.maps.LatLng(33.450879, 126.569940)
+                content: '<div>E월드</div>', 
+                latlng: new kakao.maps.LatLng(35.8532997, 128.5643566)
             },
             {
-                content: '<div>근린공원</div>',
-                latlng: new kakao.maps.LatLng(33.451393, 126.570738)
+                content: '<div>야외음악당</div>',
+                latlng: new kakao.maps.LatLng(35.8510261, 128.5564089)
             },
             {
                 content: '<div>내위치</div>',
@@ -98,8 +104,8 @@
             };
         }
         }
- 
-    </script>
+       
+</script>
     <div class = "search">
         <div class = "searchin">
             [ 검색 ]
