@@ -76,11 +76,14 @@
                 else{
                     document.getElementById("ex").style.display = 'none';
                 }
-                var currentPosition = parseInt($("#ex.used_chat").css("top")); 
-                $(window).scroll(function() { 
+                if(document.getElementById("ex").style.top.value > 0){
+                    var currentPosition = parseInt($("#ex.used_chat").css("top"));
+                    $(window).scroll(function() { 
                     var position = $(window).scrollTop();
                     $("#ex.used_chat").stop().animate({"top":-100 + position+currentPosition+"px"},1000); 
-                });
+                    });
+                }
+                
         
                 
          }
