@@ -76,13 +76,11 @@
                 else{
                     document.getElementById("ex").style.display = 'none';
                 }
-                if(document.getElementById("ex").style.top.value > 0){
-                    var currentPosition = parseInt($("#ex.used_chat").css("top"));
-                    $(window).scroll(function() { 
-                    var position = $(window).scrollTop();
-                    $("#ex.used_chat").stop().animate({"top":-100 + position+currentPosition+"px"},1000); 
-                    });
-                }
+                 var currentPosition = parseInt($("#ex.used_chat").css("top"));
+                 $(window).scroll(function() { 
+                 var position = $(window).scrollTop();
+                 $("#ex.used_chat").stop().animate({"top":-100 + position+currentPosition+"px"},1000); 
+                 });  
                 
         
                 
@@ -402,7 +400,7 @@
         </div> -->
         
     </div>
-    <div class = "used_chat" id = "ex" style="display: none; position: relative; bottom: 600px; right: -350px; width: 500px; height: 500px; float: right; z-index: 2; margin-right: 10%"; top: -800px>
+    <div class = "used_chat" id = "ex" style="display: none; position: relative; bottom: 600px; right: -350px; width: 500px; height: 500px; float: right; z-index: 2; margin-right: 10%";>
         <div id = "chat_log01" style="overflow: auto; position: relative; top: 10px; left: 10px; width: 475px; height: 430px; border: 2px solid black; border-radius: 10px; text-align: right; z-index: 2; ">
                     
         </div>
