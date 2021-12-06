@@ -82,11 +82,25 @@
                  var position = $(window).scrollTop();
                  $("#ex.used_chat").stop().animate({"top":-100 + position+currentPosition+"px"},1000); 
                  });  
-
                 
-                
-        
-                
+         }
+         function hide_(){
+            if(document.getElementById("used_").style.display == 'none'){
+                    document.getElementById("used_").style.display = 'block';
+                }
+                else{
+                    document.getElementById("used_").style.display = 'none';
+                }
+               
+         }
+         function hide__(){
+            if(document.getElementById("sitelink").style.display == 'none'){
+                    document.getElementById("sitelink").style.display = 'grid';
+                }
+                else{
+                    document.getElementById("sitelink").style.display = 'none';
+                }
+               
          }
          var chat_logtop = 5;
          var chat_logid = 0;
@@ -113,8 +127,8 @@
     <div class = "search">
         <div class = "searchin">
             [ 검색 ]
-            <input type="text" id = "searchtext" placeholder = "검색어 입력" onkeypress="if( event.keyCode == 13 ){searchData();}" > <!-- onchange = "alert('Hi')"-->
-            <input type="image" src = "검색버튼.png" width="30" height="30" onclick="searchData()">
+            <input type="text" id = "searchtext" placeholder = "검색어 입력" style="width: 560px;height:40px;font-size:17px;float:left; border-radius:7px; border-color: skyblue; margin: auto" onkeypress="if( event.keyCode == 13 ){searchData();}" > 
+            <input type="image" src = "https://cdn.pixabay.com/photo/2013/07/12/14/48/search-148820__340.png" style="float:left; width:30px; height:30px; margin:auto;" onclick="searchData()">
             <!-- <button type="button" onclick="say()" id="scbutton" >검색</button> -->
             <!-- document.querySelector('body').style.backgroundColor='black'; -->
             <!-- document.querySelector('body').style.color='white';-->
@@ -145,6 +159,11 @@
                 <button type="button" onclick = "" >대화</button>
             </div>
 
+        </div>
+        
+        <br>
+        <div id = "sitelink" style="border: solid 1px; display: none; grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
         
         <div id="map" style="width:1fr;height:350px;"></div>
