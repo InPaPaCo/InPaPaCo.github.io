@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>처음화면</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1><a href="index.html"></a></h1>
+        <ul class="menu">
+            <li><a href="#"></a>HOME</li>
+            <li><a href=""></a>CHAT</li>
+            <li><a href="login.html"></a>LOGIN</li>            
+            <!-- <li><a href=""></a>메뉴4</li>                        -->
+        </ul>
+    </div>
+    <script type="text/javascript">
+        function trade(){
+ 
+        }
+        function searchData(){
+            var textbox = document.getElementById("searchtext");
+
+            if(textbox != null){
+                alert(textbox.value + "를 검색하셨습니다.");
+            }
+        }
+    </script>
+    <div class = "search">
+        <div style="font-size: 32px; color:skyblue; margin: auto; text-align: center;">OWNBOOK</div>
+        <div class = "searchin">
+            <input type="text" id = "searchtext" placeholder = "검색어 입력" style="width: 560px;height:40px;font-size:17px;float:left; border-radius:7px; border-color: skyblue; margin: auto" onkeypress="if( event.keyCode == 13 ){searchData();}" > 
+            <input type="image" src = "https://cdn.pixabay.com/photo/2013/07/12/14/48/search-148820__340.png" style="float:left; width:30px; height:30px; margin:auto;" onclick="searchData()">
+        </div>
+    </div>
+
+        
+    <div>
+
+        <br>
+        
+        <div class="content1">
+            <div style="height: 60px;">맞춤 책추천</div>
+            <div class = "recommand">
+                
+                <input type="image" src = "https://image.aladin.co.kr/product/3408/36/cover150/8966260950_2.jpg" width="200px" height="270px" onclick="location.href = 'ex02.html'">
+                <input type="image" src = "https://image.aladin.co.kr/product/28343/79/cover150/k262835103_1.jpg" width="200px" height="270px" onclick="location.href = 'ex02.html'">
+                <input type="image" src = "https://image.aladin.co.kr/product/28385/95/cover150/k392835715_1.jpg" width="200px" height="270px" onclick="location.href = 'ex02.html'">
+                <input type="image" src = "https://image.aladin.co.kr/product/28162/69/cover150/k522835867_1.jpg" width="200px" height="270px" onclick="location.href = 'ex02.html'">
+                <input type="image" src = "https://image.aladin.co.kr/product/28101/95/cover150/k972734548_1.jpg" width="200px" height="270px" onclick="location.href = 'ex02.html'">
+            </div>
+        </div>
+        
+        
+    </div>
+    <div class = "used_chat" id = "ex" style="display: none; position: relative; bottom: 600px; right: -350px; width: 500px; height: 500px; float: right; z-index: 2; margin-right: 10%";>
+        <div id = "chat_log01" style="overflow: auto; position: relative; top: 10px; left: 10px; width: 475px; height: 430px; border: 2px solid black; border-radius: 10px; text-align: right; z-index: 2; ">
+                    
+        </div>
+        <div style="position: relative; bottom: 424px; left: 10px; width: 475px; height: 430px; border: 2px solid black; border-radius: 10px; z-index: 1;">
+
+        </div>
+        <div>
+            <input type="text" id = "chat_textbox" onkeypress="if( event.keyCode == 13 ){chatting_send();}" style = "position: relative; bottom: 415px; left: 10px; width: 400px; height: 30px; border-radius: 10px; border: 2px solid gray">
+            <input type="button" value="전송" style = "position: relative; bottom: 415px; left: 5px; width: 60px; height: 36px;
+                background-color: lightblue; border: 2px solid gray; border-radius: 10px; color: white; font-size: 15px;">
+        </div>
+    </div>
+        <script>
+            
+        </script>
+    <div class="footer">
+        
+    </div>
+</body>
+</html>
