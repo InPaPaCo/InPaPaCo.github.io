@@ -78,7 +78,7 @@
 }
 .book_information{
     display:grid;
-    grid-template-columns: 220px 350px 250px 250px;
+    grid-template-columns: 220px 350px 500px;
     margin-right: 50px;
 }
 .used{
