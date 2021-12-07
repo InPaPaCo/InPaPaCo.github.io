@@ -109,7 +109,7 @@
     display:grid;
     grid-template-columns: 220px 220px 220px 220px 220px;
     margin-top: 10px;
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     margin:0 auto;
     margin-top: 0px;
 }
