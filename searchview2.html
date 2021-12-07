@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>obeta</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1><a href="index.html">OWNBOOK</a></h1>
+        <ul class="menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="">CHAT</a></li>
+            <li><a href="login.html">LOGIN</a></li>            
+            <!-- <li><a href=""></a>메뉴4</li>                        -->
+        </ul>
+    </div>
+    <script>
+        function say(){
+            var textbox = document.getElementById("searchtext");
+
+            if(textbox != null){
+                alert(textbox.value + "를 검색하셨습니다.");
+            }
+
+        }
+    </script>
+
+    <div>
+        <div class = "search" >
+            <div class = "searchin">
+                <input type="text" id = "searchtext" placeholder = "검색어 입력" style="width: 560px;height:40px;font-size:17px;float:left; border-radius:7px; border-color: skyblue; margin: auto" onkeypress="if( event.keyCode == 13 ){searchData();}" > 
+                <input type="image" src = "https://cdn.pixabay.com/photo/2013/07/12/14/48/search-148820__340.png" style="float:left; width:30px; height:30px; margin:auto;" onclick="searchData()">
+                <!-- <button type="button" onclick="say()" id="scbutton" >검색</button> -->
+                <!-- document.querySelector('body').style.backgroundColor='black'; -->
+                <!-- document.querySelector('body').style.color='white';-->
+            </div>
+
+            <div class = "searchresult">
+                <br><br><br>
+                <div>
+                    <h3>[자바 프로그래밍] 으로 책검색 결과</h3>
+                </div>
+                <br>
+                <div style="border-top: solid 1px;">
+
+                </div>
+                <br>
+                <div style="display: grid; grid-template-columns: 150px 400px 1fr;">
+                    <input type="image" src = "예시1.jpg" width="120px" height="150px" style = "border: solid 5px;">
+                    <div>
+                        <div style="text-decoration: underline;">
+                            <br> <a href="">책 제목 : 한 번에 이해되는 자바 프로그래밍</a>
+                        </div>
+                        <br><br>
+                        <div>
+                            책 저자 : 임좌상 , 조용주 지음 <br> 인피니티북스 <br> 2021년 02월 17일 출간
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div style="border-bottom: solid 1px;">
+
+                </div>
+                <br>
+                <div style="display: grid; grid-template-columns: 150px 400px 1fr;">
+                    <input type="image" src = "예시1.jpg" width="120px" height="150px" style = "border: solid 5px;">
+                    <div>
+                        <div style="text-decoration: underline;">
+                            <br> <a href="">책 제목 : 한 번에 이해되는 자바 프로그래밍</a>
+                        </div>
+                        <br><br>
+                        <div>
+                            책 저자 : 임좌상 , 조용주 지음 <br> 인피니티북스 <br> 2021년 02월 17일 출간
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div style="border-bottom: solid 1px;">
+
+                </div>
+                <br>
+                <div style="display: grid; grid-template-columns: 150px 400px 1fr;">
+                    <input type="image" src = "예시1.jpg" width="120px" height="150px" style = "border: solid 5px;">
+                    <div>
+                        <div style="text-decoration: underline;">
+                            <br> <a href="">책 제목 : 한 번에 이해되는 자바 프로그래밍</a>
+                        </div>
+                        <br><br>
+                        <div>
+                            책 저자 : 임좌상 , 조용주 지음 <br> 인피니티북스 <br> 2021년 02월 17일 출간
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div style="border-bottom: solid 1px;">
+
+                </div>
+               
+            </div>
+            <br>
+        </div>
+        
+
+
+
+        
+     
+    
+    </div>
+
+
+    <div class="footer">
+        
+    </div>
+</body>
+</html>
